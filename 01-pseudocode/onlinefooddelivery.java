@@ -2,13 +2,16 @@ class fooditeam{
                 int iteam_id;
                 String iteam_name;
                 double price;
-                fooditeam(int iteam_id,String iteam_name,double price){
+                int quantity;
+
+                fooditeam(int iteam_id,String iteam_name,double price,int quantity){
                                 this.iteam_id=iteam_id;
                                 this.iteam_name=iteam_name;
                                 this.price=price;
+                                this.quantity=quantity;
 
                 }
-                double calculateAmount(int quantity){
+                double calculateAmount(){
                                 return  price*quantity;
 
                 }
@@ -16,8 +19,8 @@ class fooditeam{
                                 System.out.println("iteam_id:"+iteam_id);
                                 System.out.println("iteam_name:"+iteam_name);
                                 System.out.println("price:"+price);
-                                System.out.println("total amount:"+calculateAmount(2));
                                 System.out.println("quantity:"+quantity);
+                                System.out.println("total amount:"+calculateAmount());
 
 
 
@@ -52,10 +55,10 @@ class order{
                 int customer_id;
                 int quantity;
                 double total_Amount;
-                order(int order_id, Stirng order_date, String order_iteam, itn customer_id, int quantoioty,double total_Amount){
+                order(int order_id, String order_date, String order_iteam, int customer_id, int quantity,double total_Amount){
                                 this.order_id=order_id;
                                 this.order_date=order_date;
-                                this.order_iteam=orer_iteam;
+                                this.order_iteam=order_iteam;
                                 this.customer_id=customer_id;
                                 this.quantity=quantity;
                                 this.total_Amount=total_Amount;
@@ -66,7 +69,8 @@ class order{
                                 System.out.println("order_date:"+order_date);
                                 System.out.println("order_iteam:"+order_iteam);
                                 System.out.println("customer_id:"+customer_id);
-                                System.out.println("customer_number:"+customer_number);
+                                System.out.println("quantity:"+quantity);
+                                System.out.println("total_Amount:"+total_Amount);
 
                 }
 
