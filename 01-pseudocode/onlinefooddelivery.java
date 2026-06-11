@@ -17,7 +17,7 @@ class fooditeam{
                                 System.out.println("iteam_name:"+iteam_name);
                                 System.out.println("price:"+price);
                                 System.out.println("total amount:"+calculateAmount(2));
-                                System.out.println("quantity":+quantity);
+                                System.out.println("quantity:"+quantity);
 
 
 
@@ -27,9 +27,23 @@ class fooditeam{
 class customer{
                 int customer_id;
                 String customer_name;
-                String customer_adderes;
+                String customer_address;
                 String customer_number;
 
+                customer(int customer_id, String customer_name, String customer_address, String customer_number){
+                                this.customer_id=customer_id;
+                                this.customer_name=customer_name;
+                                this.customer_address=customer_address;
+                                this.customer_number=customer_number;
+
+                }
+                void displaycustomerDetails(){
+                                System.out.println("customer_id:"+customer_id);
+                                System.out.println("customer_name:"+customer_name);
+                                System.out.println("customer_address:"+customer_address);
+                                System.out.println("customer_number:"+customer_number);
+
+                }
 }
 class order{
                 int order_id;
@@ -48,11 +62,31 @@ class order{
 
                 }
                 void displayorderiteam(){
-                                System.out.println("order_id":+order_id);
-                                System.out.println(order_date:+order_date);
-                                System.out.println("order_iteam":+order_iteam);
-                                
+                                System.out.println("order_id:"+order_id);
+                                System.out.println("order_date:"+order_date);
+                                System.out.println("order_iteam:"+order_iteam);
+                                System.out.println("customer_id:"+customer_id);
+                                System.out.println("customer_number:"+customer_number);
 
                 }
 
+}
+public class onlinefooddelivery{
+public static void main(String args[]){
+                customer c1 = new customer(101,"Arnav yadav","nodia","9023124536");
+                customer c2 = new customer(102,"Arpit Agarwal","delhi","9045346789");
+                fooditeam f1 = new fooditeam(1,"pizza",100,1);
+                fooditeam f2 = new fooditeam(2,"burger",50,2);
+                fooditeam f3 = new fooditeam(3,"pasta",80,1);
+                double total_Amount = 0;
+                System.out.println("order complete ");
+                c1.displaycustomerDetails();
+
+                f1.displayiteamdetails();
+                f2.displayiteamdetails();
+                f3.displayiteamdetails();
+                total_Amount = f1.calculateAmount()+f2.calculateAmount()+f3.calculateAmount();
+                System.out.println("total_Amount:"+total_Amount);
+
+}
 }
