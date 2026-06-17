@@ -1,15 +1,28 @@
 
 class fooditeam{
+<<<<<<< HEAD
                   int iteam_id;    // private = direct koi change ne kar paye 
                   String iteam_name;
                   double price;
                   int quantity;
 
                 fooditeam(int iteam_id,String iteam_name,double price,int quantity){   //fooditeam = constructor
+=======
+                int iteam_id;
+                String iteam_name;
+                double price;
+                int quantity;
+
+                fooditeam(int iteam_id,String iteam_name,double price,int quantity){
+>>>>>>> 5f1a16ef4fa801ca6ff5b9a221cde996d1a8906d
                                 this.iteam_id=iteam_id;
                                 this.iteam_name=iteam_name;  // this = current class ka reference variable hai, isse hum current class ke members ko refer kar sakte hai
                                 this.price=price;
+<<<<<<< HEAD
                                 this.quantity=quantity;  
+=======
+                                this.quantity=quantity;
+>>>>>>> 5f1a16ef4fa801ca6ff5b9a221cde996d1a8906d
 
                 }
                 double calculateAmount(){
