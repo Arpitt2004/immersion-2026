@@ -1,21 +1,22 @@
-class fooditeam{
-                int iteam_id;
-                String iteam_name;
-                double price;
-                int quantity;
 
-                fooditeam(int iteam_id,String iteam_name,double price,int quantity){
+class fooditeam{
+                  int iteam_id;    // private = direct koi change ne kar paye 
+                  String iteam_name;
+                  double price;
+                  int quantity;
+
+                fooditeam(int iteam_id,String iteam_name,double price,int quantity){   //fooditeam = constructor
                                 this.iteam_id=iteam_id;
-                                this.iteam_name=iteam_name;
+                                this.iteam_name=iteam_name;  // this = current class ka reference variable hai, isse hum current class ke members ko refer kar sakte hai
                                 this.price=price;
-                                this.quantity=quantity;
+                                this.quantity=quantity;  
 
                 }
                 double calculateAmount(){
                                 return  price*quantity;
 
                 }
-                void displayiteamdetails(){
+                void displayiteamdetails(){ // void = method does not return any value
                                 System.out.println("iteam_id:"+iteam_id);
                                 System.out.println("iteam_name:"+iteam_name);
                                 System.out.println("price:"+price);
@@ -75,6 +76,7 @@ class order{
                 }
 
 }
+
 public class onlinefooddelivery{
 public static void main(String args[]){
                 customer c1 = new customer(101,"Arnav yadav","nodia","9023124536");
@@ -82,6 +84,7 @@ public static void main(String args[]){
                 fooditeam f1 = new fooditeam(1,"pizza",100,1);
                 fooditeam f2 = new fooditeam(2,"burger",50,2);
                 fooditeam f3 = new fooditeam(3,"pasta",80,1);
+                fooditeam f4 = new fooditeam(4,"sandwich",40,3);
                 double total_Amount = 0;
                 System.out.println("order complete ");
                 c1.displaycustomerDetails();
@@ -89,7 +92,8 @@ public static void main(String args[]){
                 f1.displayiteamdetails();
                 f2.displayiteamdetails();
                 f3.displayiteamdetails();
-                total_Amount = f1.calculateAmount()+f2.calculateAmount()+f3.calculateAmount();
+                f4.displayiteamdetails();
+                total_Amount = f1.calculateAmount()+f2.calculateAmount()+f3.calculateAmount()+f4.calculateAmount();
                 System.out.println("total_Amount:"+total_Amount);
 
 }
